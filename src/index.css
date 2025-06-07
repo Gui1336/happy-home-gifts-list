@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 250 250;
+    --foreground: 23 23 23;
+
+    --card: 255 255 255;
+    --card-foreground: 23 23 23;
+
+    --popover: 255 255 255;
+    --popover-foreground: 23 23 23;
+
+    --primary: 85 102 87;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 139 144 140;
+    --secondary-foreground: 255 255 255;
+
+    --muted: 245 245 245;
+    --muted-foreground: 115 115 115;
+
+    --accent: 225 235 226;
+    --accent-foreground: 75 85 76;
+
+    --destructive: 239 68 68;
+    --destructive-foreground: 254 242 242;
+
+    --border: 229 229 229;
+    --input: 229 229 229;
+    --ring: 85 102 87;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 82 82 82;
+    --sidebar-primary: 85 102 87;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 225 235 226;
+    --sidebar-accent-foreground: 75 85 76;
+    --sidebar-border: 229 229 229;
+    --sidebar-ring: 85 102 87;
+  }
+
+  .dark {
+    --background: 23 23 23;
+    --foreground: 250 250 250;
+
+    --card: 38 38 38;
+    --card-foreground: 250 250 250;
+
+    --popover: 38 38 38;
+    --popover-foreground: 250 250 250;
+
+    --primary: 85 102 87;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 139 144 140;
+    --secondary-foreground: 255 255 255;
+
+    --muted: 64 64 64;
+    --muted-foreground: 163 163 163;
+
+    --accent: 75 85 76;
+    --accent-foreground: 225 235 226;
+
+    --destructive: 220 38 38;
+    --destructive-foreground: 254 242 242;
+
+    --border: 64 64 64;
+    --input: 64 64 64;
+    --ring: 85 102 87;
+
+    --sidebar-background: 23 23 23;
+    --sidebar-foreground: 212 212 212;
+    --sidebar-primary: 85 102 87;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 75 85 76;
+    --sidebar-accent-foreground: 225 235 226;
+    --sidebar-border: 64 64 64;
+    --sidebar-ring: 85 102 87;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 1px 1px, rgba(108, 127, 109, 0.05) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  button, [type='button'], [type='reset'], [type='submit'] {
+    background-color: #fff !important;
+    color: inherit;
+    border: none;
+    box-shadow: none;
+  }
+
+  /* Ajustes para inputs e campos de formulário */
+  input, textarea, select {
+    @apply bg-white border-neutral-200 focus:border-primary focus:ring-primary/20;
+  }
+
+  input::placeholder, textarea::placeholder {
+    @apply text-neutral-400;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #f1f4f1 0%, #e1e6e2 25%, #e5e5e5 75%, #f5f5f5 100%);
+  }
+  
+  .card-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card-shadow-hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+}
